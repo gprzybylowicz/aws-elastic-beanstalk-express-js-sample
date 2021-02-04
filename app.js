@@ -5,7 +5,7 @@ const port = 8080;
 
 app.get('/', (req, res) => {
   const all_files = ls('/*')
-  res.send(all_files.join(","))
+  res.send(JSON.stringify(all_files))
 });
 
 app.listen(port);
